@@ -1,0 +1,28 @@
+h1{
+  text-align:center;
+  color:#3d3277;
+  font-family:system-ui;
+  font size:200%;
+}
+body{
+  background-color:#fdeb86
+}
+form{
+  text-align:center;
+  
+}
+img{
+  width:50%;
+  height:50%
+}
+p{
+  text-align:center
+}
+
+input[type="text"], input[type="radio"] {
+  width: 150px;
+}
+
+input[type="text"][name="age"], input[type="text"][name="height"], input[type="text"][name="weight"] {
+  width: 50px;
+}
