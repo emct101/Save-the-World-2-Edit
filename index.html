@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My webapp</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body>
+      <h1>Welcome to CheckYourHealth</h1>
+      <form action="/" method='post'>
+         <label for='name'>Name:</label>
+         <input type='text' id='name' name='name'><br>
+         <label for='age'>Age:</label>
+         <input type='text'id='age' name='age'><br>
+         <label for='height'>Height(cm):</label>
+         <input type='text' name='height'><br>  
+         <label for='weight'>Weight(kg):</label>
+         <input type='text' name='weight'><br>
+         <label for='gender'>Gender:</label><br>
+         <input type='radio' id='male' name='gender' value='m'>
+         <label for='male'>Male</label><br>
+         <input type='radio' id='female' name='gender' value='f'>
+         <label for='female'>Female</label><br>
+         <input type="submit" value='calculate'>
+      </form>
+      {% if bmr %}
+      <p>Your daily bmr demand is{{ bmr }}kcal</p>
+      <p>To lose 1-2kg/week: {{reduce}}</p>
+      {% endif %}
+      {%if bmi%}
+      <p>Your bmi index is {{bmi}}</p>
+      <p>you can compare your bmi value to the picture below to gauge your bmi level</p>
+      <p style="text-align:center;"><img src='https://images.everydayhealth.com/images/diet-nutrition/weight/bmi-in-adults-722x406.jpg?w=1110'></p>
+      {%endif%}
+   </body>
+</html>
